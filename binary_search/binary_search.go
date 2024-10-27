@@ -1,5 +1,8 @@
 package binary_search
 
+// Search target value in sorted slise.
+//
+// Complexity: O(logn)
 func search(nums []int, target int) int {
 	var low, hight int = 0, len(nums) - 1
 
