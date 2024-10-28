@@ -4,14 +4,13 @@ package two_sum
 //
 // Complexity: O(n)
 func twoSum(nums []int, target int) []int {
-	var exist = make(map[int]int)
+	exist := make(map[int]int)
 	for index, num := range nums {
 		x := target - num
-		if value, ok := exist[x]; !ok {
-			exist[num] = index
-		} else {
+		if value, ok := exist[x]; ok {
 			return []int{index, value}
 		}
+		exist[num] = index
 	}
 	return []int{}
 }
